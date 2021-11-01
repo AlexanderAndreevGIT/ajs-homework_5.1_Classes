@@ -29,6 +29,8 @@ test('class Character should constructs object', () => {
     type: 'swordsman',
     health: 100,
     level: 1,
+    attack: 0,
+    defence: 0,
   };
   const received = new Character(input[0], input[1]);
   expect(received).toEqual(expected);
