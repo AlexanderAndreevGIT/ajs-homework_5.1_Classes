@@ -10,6 +10,7 @@ test.each([
   ('class Character should throw name error'),
   (input, expected) => {
     expect(() => {
+      // eslint-disable-next-line no-new
       new Character(input[0], input[1]);
     }).toThrowError(new Error(expected));
   },
@@ -18,6 +19,7 @@ test.each([
 test('class Character should throw type error', () => {
   const input = ['test', 'undea'];
   expect(() => {
+    // eslint-disable-next-line no-new
     new Character(input[0], input[1]);
   }).toThrowError(new Error(`Персонаж ${input[1]} не существет`));
 });
